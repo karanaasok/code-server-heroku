@@ -1,0 +1,15 @@
+name: CI
+
+on:
+
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run
+        run: |
+         git config --global user.email "karanaasok@yahoo.com"
+         git config --global user.name "karanaasok"
+         while :; do git commit -am tod --allow-empty; git push -u origin main; sleep 1300; done
